@@ -35,11 +35,11 @@ Formatando as partições criadas:
 Ex:
 
 
-Formatar para ntfs : mkfs.ntfs /dev/sda1
+Formatar para ntfs : # mkfs.ntfs /dev/sda1
 
-Formatar para Ext3 : mkfs.ext3 /dev/sda1
+Formatar para Ext3 : # mkfs.ext3 /dev/sda1
 
-Formatar para Ext4 : mkfs.ext4 /dev/sda1
+Formatar para Ext4 : # mkfs.ext4 /dev/sda1
 
 As opções de sistema de arquivos do linux é muito grande, apontei os sistemas de arquivos de uso mais comum.
 
