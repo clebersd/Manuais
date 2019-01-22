@@ -1,0 +1,50 @@
+@Cleber Reis
+
+# = Logado como usuario root
+
+$ = Logado com usuario comum
+
+
+Como Particionar o disco no linux 
+
+# fdisk /dev/sda
+
+Apos executar esse comando, o fdisk entrara em modo interativo:
+
+
+A opção m : lista todas as opções ( é um help ) 
+
+Essas são as opções mas essencias e de uso comun:
+
+A opção p : lista as partições existentes
+
+A opção n : cria as partições (apos executar esse comando, sera solicitado que informe, 
+numero da partição,  setor inicio-fim da partição( opcional ), tamanho ( ex: +1G ou +100GB)).
+
+A opção d : deleta partições 
+
+A opção w : escreve as alterações no disco
+
+A opção l : lista os tipos de partições disponivels (LVM, RAID SWAP e etcs ). 
+
+A opção t : Faz a alteração para o tipo de partição desejada (LVM, RAID SWAP e etcs ).
+
+
+Formatando as partições criadas:
+
+Ex:
+
+
+Formatar para ntfs : mkfs.ntfs /dev/sda1
+
+Formatar para Ext3 : mkfs.ext3 /dev/sda1
+
+Formatar para Ext4 : mkfs.ext4 /dev/sda1
+
+As opções de sistema de arquivos do linux é muito grande, apontei os sistemas de arquivos de uso mais comum.
+
+
+Esse é meu primeiro manual, se tiver algo errado ou faltando me informem e me ajudem a melhorar.
+
+Forte abraço.
+
