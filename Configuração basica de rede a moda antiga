@@ -1,0 +1,44 @@
+Configuração basica de rede a moda antiga.
+
+
+Atualmente o pacote net-tools (ifconfig) esta sendo descontinuado em algumas distribuições ( :/ ), 
+sendo substituido pelo iproute2 ( ip ).Porem sempre tem algum cliente aleatorio que possui servi-
+dores com versões antigas, e é para isso que esse manual vai ser util.
+
+
+Toda configuração tem que ser executado com o usuario root.
+
+
+# ifconfig -a (lista todas as interfaces de rede do sistema eth0,enps3,lo e etcs ) 
+
+
+# ifconfig eth0 ( No meu exemplo a interface é eth0,mas, pode ser eth1,eth2...ou enps3. 
+Isso depende do numero de placas de rede da maquina e da distribuição utilizada)
+
+
+Comando abaixo vai configurar a placa de rede eth0 com o ip 192.168.1.100, mascara de rede 255.255.255.0 e gateway 192.168.1.1.
+
+
+# ifconfig  eth0 192.168.1.100 netmask 255.255.255.0 gw 192.168.1.1
+
+
+Bônus: 
+
+Configurar cliente dns  manualmente
+
+
+Edite o arquivo resolv.conf, que esta salvo no diretorio /etc com usuario root :
+
+#Dns primario 
+
+nameserver 8.8.8.8  ( o parametro nameserver especifica o end do servidor dns )
+
+#Dns Secundario
+
+nameserver 8.8.4.4 
+
+
+Se tiver algo errado ou faltando me informem e me ajudem a melhorar.
+
+Forte abraço.
+
