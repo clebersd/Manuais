@@ -1,0 +1,31 @@
+COMO CRIAR UM FILESYSTEM DENTRO DE UM ARQUIVO
+
+
+Primeiro criar um arquivo com 100 MB
+
+$ dd if=/dev/zero of=./arquivo_100mb.bin bs=512 count=200000
+
+Apos criar o arquivo vamos formatar o arquivo( serve qualquer fs, no caso arqui vou usar ext4)
+
+Como root
+
+# mkfs.ext4 arquivo_100mb.bin
+
+
+Apos formatar vamos montar o arquivo
+
+
+# mount arquivo_100mb.bin  /mnt
+
+
+Com o arquivo montado, podemos copiar arquivos para dentro do "arquivo".
+
+
+# cp arquiv1.txt /mnt
+
+E depois desmontar o arquivo
+
+# umount arquivo_100mb.bin
+
+
+Ao montar novamente o arquivo vc vera o arquiv1.txt dentro do arquivo.
